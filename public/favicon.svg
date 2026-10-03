@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="grad-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#grad-bg)" stroke="url(#grad-border)" stroke-width="2" />
+
+  <!-- Accent Geometry / Modern MA Monogram -->
+  <g filter="url(#glow)">
+    <!-- 'M' shape -->
+    <path d="M15 44V20L25 33L32 23L39 33L49 20V44" 
+          stroke="url(#grad-accent)" 
+          stroke-width="3.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+    <!-- Horizontal Crossbar linking to form 'A' in the center -->
+    <line x1="26" y1="36" x2="38" y2="36" 
+          stroke="url(#grad-accent)" 
+          stroke-width="3" 
+          stroke-linecap="round" />
+    <!-- Glowing Accent Dot -->
+    <circle cx="32" cy="16" r="2.5" fill="#38bdf8" />
+  </g>
+</svg>
